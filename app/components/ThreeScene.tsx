@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 export default function ThreeScene() {
-  const mountRef = useRef(null)
+  const mountRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Scene
@@ -23,7 +23,9 @@ export default function ThreeScene() {
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true })
     renderer.setSize(window.innerWidth, window.innerHeight)
-    mountRef.current.appendChild(renderer.domElement)
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement)
+    }
 
     // Cube
     const geometry = new THREE.BoxGeometry(1, 1, 1) // width, height, depth
@@ -47,7 +49,9 @@ export default function ThreeScene() {
 
     // Cleanup
     return () => {
-      mountRef.current.removeChild(renderer.domElement)
+      if (mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement)
+      }
     }
   }, [])
 

@@ -9,7 +9,7 @@ export default function Cursor() {
   useEffect(() => {
     const cursor = cursorRef.current;
 
-    const moveCursor = (e) => {
+    const moveCursor = (e: { clientX: number; clientY: number; }) => {
       gsap.to(cursor, {
         x: e.clientX - 5,
         y: e.clientY - 5,

@@ -12,15 +12,15 @@ export default function Button({
   const flairRef = useRef(null);
 
   useEffect(() => {
-    const button = buttonRef.current;
-    const flair = flairRef.current;
+    const button = buttonRef.current as HTMLElement | null;
+    const flair = flairRef.current as HTMLElement | null;
 
     if (!button || !flair) return;
 
     const xSet = gsap.quickSetter(flair, "xPercent");
     const ySet = gsap.quickSetter(flair, "yPercent");
 
-    const getXY = (e) => {
+    const getXY = (e: { clientX: number; clientY: number; }) => {
       const { left, top, width, height } =
         button.getBoundingClientRect();
 
@@ -38,7 +38,7 @@ export default function Button({
       };
     };
 
-    const enter = (e) => {
+    const enter = (e: any) => {
       const { x, y } = getXY(e);
       xSet(x);
       ySet(y);
@@ -50,7 +50,7 @@ export default function Button({
       });
     };
 
-    const leave = (e) => {
+    const leave = (e: any) => {
       const { x, y } = getXY(e);
 
       gsap.killTweensOf(flair);
@@ -64,7 +64,7 @@ export default function Button({
       });
     };
 
-    const move = (e) => {
+    const move = (e: any) => {
       const { x, y } = getXY(e);
 
       gsap.to(flair, {
