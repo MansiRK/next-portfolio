@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-surface-white: #ffffff;
+  --color-just-black: #000000;
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,body{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Outfit', sans-serif;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999; /* must be above all content */
+  box-sizing: border-box;
+}
+
+.p-square{
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+    animation: slide 4s linear infinite;
+}
+
+.hero-lines > div:nth-child(1) .p-square {
+  animation-delay: 0s;
+}
+
+.hero-lines > div:nth-child(2) .p-square {
+  animation-delay: 1.2s;
+}
+
+.hero-lines > div:nth-child(3) .p-square {
+  animation-delay: 2.4s;
+}
+
+.hero-lines > div:nth-child(4) .p-square {
+  animation-delay: 0.8s;
+}
+
+.hero-lines > div:nth-child(5) .p-square {
+  animation-delay: 3s;
+}
+
+/* Base reset */
+a {
+  color: white;
+}
+
+.button {
+  align-items: center;
+  background: 0 0;
+  border: none;
+  border-radius: 6.25rem;
+  color: var(--color-surface-white);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 400;
+  gap: 0.363636em;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 1.04545;
+  overflow: hidden;
+  padding:16px 30px;
+  position: relative;
+  text-decoration: none;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .button.button--stroke:hover {
+    color: var(--color-just-black);
+    text-decoration: none;
+  }
+}
+
+.button--stroke:after {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button--stroke:after {
+  border: 1px solid var(--color-surface-white);
+  border-radius: 6.25rem;
+  content: "";
+  pointer-events: none;
+}
+
+.button__label {
+  position: relative;
+  text-align: center;
+  transition: color 50ms var(--ease-in-out-quart);
+}
+
+.button--stroke:hover .button__label {
+  transition: color 0.15s var(--ease-in-out-quart);
+}
+
+.button__flair {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button--stroke .button__flair {
+  transform: scale(0);
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.button__flair:before {
+  aspect-ratio: 1/1;
+  background-color: var(--color-surface-white);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 170%;
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+}
+100% {
+    top:100vh;
+}
+}
