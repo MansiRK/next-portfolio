@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const Mission = () => {
-  const textRef = useRef(null)
+  const textRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
     const textEl = textRef.current
