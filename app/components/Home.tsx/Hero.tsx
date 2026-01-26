@@ -8,23 +8,23 @@ const Hero = () => {
      <section className='hero-section xl:p-25 lg:p-20 md:p-20 p-8 w-full h-full relative '>
          <div className='hero-lines top-0 left-0 absolute flex justify-around items-center w-full h-full bg-transparent'>
         <div className='relative w-px h-full bg-[#ffffff19]'>
-            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px xl:h-[10vh] lg:h-[5vh]'></div>
+            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
 
         <div className='relative w-px h-full bg-[#ffffff19]'>
-            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px xl:h-[10vh] lg:h-[5vh]'></div>
+            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
 
         <div className='relative w-px h-full bg-[#ffffff19]'>
-            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px xl:h-[10vh] lg:h-[5vh]'></div>
+            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
 
         <div className='relative w-px h-full bg-[#ffffff19]'>
-            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px xl:h-[10vh] lg:h-[5vh]'></div>
+            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
 
         <div className='relative w-px h-full bg-[#ffffff19]'>
-            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px xl:h-[10vh] lg:h-[5vh]'></div>
+            <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
     </div>
       <div className='w-full flex xl:flex-row lg:flex-row flex-col-reverse py-16 justify-between relative z-[10]'>
