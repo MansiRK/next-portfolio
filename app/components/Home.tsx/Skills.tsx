@@ -6,6 +6,8 @@ import SkillModel from '../SkillModel'
 
 import dynamic from 'next/dynamic';
 import ServerCanvas from '../SkillsCanvas/ServerCanvas';
+import DatabaseCanvas from '../SkillsCanvas/DatabaseCanvas';
+import ToolsCanvas from '../SkillsCanvas/ToolsCanvas';
 
 const DesktopCanvas = dynamic(() => import('@/app/components/SkillsCanvas/DesktopCanvas'), { ssr: false });
 
@@ -56,6 +58,36 @@ return (
 
             <div className="w-[70%] flex flex-col justify-center items-start ps-[48px]">
               <h2 className="text-[72px] font-medium text-white">Backend</h2>
+              <p className="text-[#adb5bd] max-w-[700px]">
+                We believe in the power of visual storytelling...
+              </p>
+            </div>
+
+          </div>
+
+          <div className="skill-div group flex items-center justify-start relative p-[48px] cursor-pointer overflow-hidden duration-1000 border-[#222222] border-b w-full">
+          <div className='w-[30%] relative'>
+          <DatabaseCanvas/>
+
+          </div>
+
+            <div className="w-[70%] flex flex-col justify-center items-start ps-[48px]">
+              <h2 className="text-[72px] font-medium text-white">Database</h2>
+              <p className="text-[#adb5bd] max-w-[700px]">
+                We believe in the power of visual storytelling...
+              </p>
+            </div>
+
+          </div>
+
+          <div className="skill-div group flex items-center justify-start relative p-[48px] cursor-pointer overflow-hidden duration-1000 border-[#222222] border-b w-full">
+          <div className='w-[30%] relative'>
+          <ToolsCanvas/>
+
+          </div>
+
+            <div className="w-[70%] flex flex-col justify-center items-start ps-[48px]">
+              <h2 className="text-[72px] font-medium text-white">Tools</h2>
               <p className="text-[#adb5bd] max-w-[700px]">
                 We believe in the power of visual storytelling...
               </p>
