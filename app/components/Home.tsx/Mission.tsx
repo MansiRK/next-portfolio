@@ -40,11 +40,11 @@ const Mission = () => {
   }, [])
 
   return (
-    <section className='mission-section relative h-screen flex justify-center items-center'>
-      <div className='p-[40px] relative text-center z-[10] flex flex-col justify-center items-center'>
+    <section className='mission-section relative h-screen flex justify-center items-center z-[20]'>
+      <div className='xl:p-[40px] lg:p-[40px] md:p-[20px] p-[20px] relative text-center z-[10] flex flex-col justify-center items-center'>
         <h3
           ref={textRef}
-          className='px-16 uppercase text-[35px] leading-[35px] font-base text-white'
+          className='xl:px-16 lg:px-16 md:px-10 px-8 uppercase xl:text-[35px] lg:text-[35px] md:text-[30px] text-[25px] xl:leading-[35px] lg:leading-[35px] leading-tight font-base text-white'
         >
           Our mission is simple: to empower brands and businesses with compelling design and marketing solutions that leave a lasting impact. We believe that every project is an opportunity to make the ordinary extraordinary.
         </h3>

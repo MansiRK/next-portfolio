@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
      <section className='hero-section xl:p-25 lg:p-20 md:p-20 p-8 w-full h-full relative '>
-         <div className='hero-lines top-0 left-0 absolute flex justify-around items-center w-full h-full bg-transparent'>
+         <div className='hero-lines top-0 left-0 absolute flex justify-around items-center w-full h-full bg-transparent z-[10]'>
         <div className='relative w-px h-full bg-[#ffffff19]'>
             <div className='p-square opacity-[0.7] absolute xl:left-[0.5px] lg:left-[0.2px] w-px h-[10vh]'></div>
         </div>
@@ -39,7 +39,7 @@ const Hero = () => {
                 <a href="/" className='border border-white rounded-[28px] px-6 py-3 inline-block text-[19px] leading-base'>More About Me</a>
             </div> */}
 
-            <Button text='More About Me' href='/about'/>
+            <Button text='More About Me' href='#about'/>
         </div>
         <div className='xl:w-[50%] lg:w-[50%] w-full flex items-center justify-center'>
             <img src="./images/hero-img.webp" className='xl:w-[600px] lg:w-[400px] xl:h-[600px] lg:h-[400px] object-cover rounded-full z-[10]' alt="" />

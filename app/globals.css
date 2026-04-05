@@ -166,3 +166,16 @@ a {
     top:100vh;
 }
 }
+
+@keyframes laptop-rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -1606px 0px; /* adjust based on image width */
+  }
+}
+
+.skill-div:hover .skill-sprite {
+  animation: laptop-rotate 4s steps(11) forwards;
+}

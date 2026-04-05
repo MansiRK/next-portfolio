@@ -30,9 +30,9 @@ const Navbar = () => {
         <h2 className='xl:text-[48px] lg:text-[40px] md:text-[35px] text-[30px] uppercase inline-block font-[500] xl:leading-[72px] leading-tight xl:tracking-[6px] tracking-wider relative before:absolute before:bottom-0 before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>About</h2>
         </div>
 
-         <div className='group w-full cursor-pointer mb-[10px] text-start inline-block'>
+         {/* <div className='group w-full cursor-pointer mb-[10px] text-start inline-block'>
         <h2 className='xl:text-[48px] lg:text-[40px] md:text-[35px] text-[30px] uppercase inline-block font-[500] xl:leading-[72px] leading-tight xl:tracking-[6px] tracking-wider relative before:absolute before:bottom-0 before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>Experience</h2>
-        </div>
+        </div> */}
 
          <div className='group w-full cursor-pointer mb-[10px] text-start inline-block'>
         <h2 className='xl:text-[48px] lg:text-[40px] md:text-[35px] text-[30px] uppercase inline-block font-[500] xl:leading-[72px] leading-tight xl:tracking-[6px] tracking-wider relative before:absolute before:bottom-0 before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>Skills</h2>

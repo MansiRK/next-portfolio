@@ -1,27 +1,34 @@
+'use client';
+
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+import dynamic from 'next/dynamic';
+
+const ThreeCanvas = dynamic(() => import('@/app/components/ThreeCanvas'), { ssr: false });
 
 const Footer = () => {
   return (
-    <div className='bg-black xl:py-16 xl:px-30 lg:py-14 lg:px-26 md:py-14 md:px-14 py-16 px-8 w-full items-center'>
-        <div className='xl:flex lg:flex md:flex block w-full justify-between mb-2 items-start'>
+    <>
+     <div className='relative bg-black xl:py-16 xl:px-30 lg:py-14 lg:px-26 md:py-14 md:px-14 py-16 px-8 w-full items-center overflow-hidden'>
+     <ThreeCanvas />
+
+        <div className='xl:flex lg:flex md:flex block w-full justify-between mb-2 items-start z-10 relative'>
   <div className='xl:w-[70%] lg:w-[70%] md:w-[70%] w-full xl:mb-0 lg:mb-0 md:mb-0 mb-6 xl:flex lg:flex md:flex block justify-between items-start'>
     <div className='xl:w-[50%] lg:w-[50%] md:w-[50%] w-full flex flex-col justify-center items-start pe-[30px]'>
 <div className='group cursor-pointer text-start inline-block'>
         <h2 className='xl:text-[45px] lg:text-[35px] md:text-[28px] text-[20px] uppercase inline-block font-base tracking-[3px] leading-tight relative before:absolute before:bottom-[4px] before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>About</h2>
         </div>
 
-        <div className='group cursor-pointer text-start inline-block'>
+        {/* <div className='group cursor-pointer text-start inline-block'>
         <h2 className='xl:text-[45px] lg:text-[35px] md:text-[28px] text-[20px] uppercase inline-block font-base tracking-[3px] leading-tight relative before:absolute before:bottom-[4px] before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>Experience</h2>
-        </div>
+        </div> */}
 
         <div className='group cursor-pointer text-start inline-block'>
         <h2 className='xl:text-[45px] lg:text-[35px] md:text-[28px] text-[20px] uppercase inline-block font-base tracking-[3px] leading-tight relative before:absolute before:bottom-[4px] before:w-px before:h-[2px] before:bg-transparent group-hover:before:bg-white group-hover:before:h-[2px] group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out'>Skills</h2>
         </div>
     </div>
-
 
          <div className='xl:w-[50%] lg:w-[50%] md:w-[50%] w-full flex flex-col justify-center items-start pe-[30px]'>
          <div className='group cursor-pointer text-start inline-block'>
@@ -40,11 +47,11 @@ const Footer = () => {
         </div>
     
 
-      <div >
+      <div className="relative z-10">
         <a href="mailto:kamblemansi1110@gmail.com" className='xl:text-[80px] lg:text-[60px] md:text-[40px] sm:text-[30px] text-[25px] font-base underline leading-base'>kamblemansi1110@gmail.com</a>
       </div>
 
-      <div className='w-full flex justify-evenly mt-6'>
+      <div className='w-full flex justify-evenly mt-6 relative z-10'>
         <div className='w-[60%]'>
             <p className='text-[16px] font-extralight tracking-wide'>© 2026 All Rights Reserved</p>
         </div>
@@ -74,6 +81,8 @@ const Footer = () => {
       </div>
 
     </div>
+    </>
+    
   )
 }
 
